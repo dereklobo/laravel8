@@ -13,13 +13,9 @@ class Post extends Model
 
     public static function findAll() 
     {
-
         $files = File::files(resource_path("posts/"));
         
-        return array_map(function($file){
-             $file->getContents();
-        },$files);
-    
+        return array_map(fn($file) => $file->getContents(),$files);
     }
 
     public static function find($slug) 
