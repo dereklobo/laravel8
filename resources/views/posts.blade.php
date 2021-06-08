@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,19 +9,16 @@
 <body>
 
     <div class="container">
-        @foreach ($posts as $post)
-            <article>
-                <h1>
-                    <a href="/posts/{{$post->slug}}">{{$post->title}}</a>
-                </h1>
-                
-                <div>
-                    {{$post->excerpt}}
-                </div>
-            </article>
-        @endforeach
+       
     </div>
     
 
 </body>
-</html>
+</html> --}}
+
+<x-layout>
+    <x-slot name="content">
+        content="hello there"
+    </x-slot>
+    
+</x-layout>
